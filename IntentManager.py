@@ -1,7 +1,7 @@
 import threading
 import time
 
-from mouse_mover.KeyMouseController import KeyMouseController
+from controller.KeyMouseController import KeyMouseController
 
 intention = None
 

@@ -1,7 +1,7 @@
 from IntentManager import IntentManager
 from log import LogFactory
-from mouse_mover import ControllerFactory
-from mouse_mover.KeyMouseController import KeyMouseController
+from controller import ControllerFactory
+from controller.KeyMouseController import KeyMouseController
 
 controller_params = {
     "win32api": {},

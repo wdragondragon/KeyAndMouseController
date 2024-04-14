@@ -1,9 +1,9 @@
 from log import LogFactory
-from mouse_mover.FeiController import FeiControllerKey
-from mouse_mover.KmBoxController import KmBoxControllerKey
-from mouse_mover.KmBoxNetController import KmBoxNetControllerKey
-from mouse_mover.Win32ApiController import Win32ApiControllerKey
-from mouse_mover.WuYaController import WuYaControllerKey
+from controller.FeiController import FeiControllerKey
+from controller.KmBoxController import KmBoxControllerKey
+from controller.KmBoxNetController import KmBoxNetControllerKey
+from controller.Win32ApiController import Win32ApiControllerKey
+from controller.WuYaController import WuYaControllerKey
 
 
 def get_controller(controller_params, mouse_model):

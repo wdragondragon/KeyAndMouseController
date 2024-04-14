@@ -3,7 +3,7 @@ from ctypes import *
 import win32com.client
 
 from log import LogFactory
-from mouse_mover.KeyMouseController import KeyMouseController
+from controller.KeyMouseController import KeyMouseController
 
 
 class WuYaControllerKey(KeyMouseController):

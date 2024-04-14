@@ -1,5 +1,5 @@
 from ctypes import windll
-from mouse_mover.KeyMouseController import KeyMouseController
+from controller.KeyMouseController import KeyMouseController
 
 MOUSE_EVEN_TF_LEFT_DOWN = 0x2
 MOUSE_EVEN_TF_LEFT_UP = 0x4

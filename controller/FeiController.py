@@ -1,6 +1,6 @@
 import ctypes
 
-from mouse_mover.KeyMouseController import KeyMouseController
+from controller.KeyMouseController import KeyMouseController
 
 
 class FeiControllerKey(KeyMouseController):
