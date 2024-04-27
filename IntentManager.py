@@ -13,7 +13,7 @@ class IntentManager:
     """
 
     def __init__(self, key_mouse_controller: KeyMouseController, move_step=(1, 1), move_frequency=1000,
-                 move_step_max=None):
+                 move_step_max=None, move_optimization=True):
         self.intention = None
         self.change_coordinates_num = 0
         self.key_mouse_controller = key_mouse_controller
@@ -21,6 +21,7 @@ class IntentManager:
         self.sleep_time = 1 / move_frequency
         self.move_step = move_step
         self.move_step_max = move_step_max
+        self.move_optimization = move_optimization
         if move_step_max is None:
             self.move_step_max = self.move_step
         self.run_sign = True
@@ -97,11 +98,11 @@ class IntentManager:
 
         move_step, move_step_y = (random.randint(move_step_temp, move_step_temp_max),
                                   random.randint(move_step_y_temp, move_step_y_temp_max))
-        if x > 0 and y > 0:
+        if self.move_optimization and x > 0 and y > 0:
             x_moving_ratio = x / y
             if x_moving_ratio <= 0.5:
                 random_number = random.random()
-                if x_moving_ratio > random_number:
+                if x_moving_ratio < random_number:
                     move_step = 1
                 else:
                     move_step = 0
