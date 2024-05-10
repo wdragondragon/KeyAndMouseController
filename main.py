@@ -1,3 +1,5 @@
+import time
+
 from IntentManager import IntentManager
 from log import LogFactory
 from controller import ControllerFactory
@@ -27,7 +29,8 @@ if __name__ == '__main__':
     key_mouse_controller: KeyMouseController = ControllerFactory.get_controller(controller_params=controller_params,
                                                                                 mouse_model='km_box_net')
     intent_manager: IntentManager = IntentManager(key_mouse_controller=key_mouse_controller, move_step=(1, 1),
-                                                  move_step_max=(3, 3), move_frequency=500)
+                                                  move_step_max=(3, 2), move_frequency=500)
     intent_manager.start()
-    intent_manager.set_intention(1000, 100)
+    # intent_manager.set_intention(200, 100)
+    intent_manager.testMouseRate()
     intent_manager.stop()

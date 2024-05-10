@@ -114,3 +114,17 @@ class IntentManager:
                 else:
                     move_step_y = 0
         return move_step, move_step_y
+
+    def testMouseRate(self):
+        """
+            测试鼠标性能
+        :return:
+        """
+        i = 0
+        x = 1
+        start = time.time()
+        while int((time.time() - start) * 1000) < 1000:
+            self.key_mouse_controller.move_rp(x, x)
+            i += 1
+            x = -x
+        print(f"鼠标性能为{i}/s")
