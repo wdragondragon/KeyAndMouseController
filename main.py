@@ -14,7 +14,7 @@ controller_params = {
         "VID/PID": "26121701"
     },
     "fei_yi_lai": {
-        "VID/PID": "C2160102"
+        "VID/PID": "C2160301"
     },
     "km_box_net": {
         "ip": "192.168.2.188",
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     LogFactory.init_logger('console')
 
     key_mouse_controller: KeyMouseController = ControllerFactory.get_controller(controller_params=controller_params,
-                                                                                mouse_model='km_box_net')
+                                                                                mouse_model='fei_yi_lai')
     intent_manager: IntentManager = IntentManager(key_mouse_controller=key_mouse_controller, move_step=(1, 1),
                                                   move_step_max=(3, 2), move_frequency=500)
     intent_manager.start()
