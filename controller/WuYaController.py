@@ -11,7 +11,7 @@ class WuYaControllerKey(KeyMouseController):
         # 进程内注册插件,模块所在的路径按照实际位置修改
         super().__init__(mouse_mover_param)
         vid_pid = mouse_mover_param["VID/PID"]
-        hkm_dll = windll.LoadLibrary("wy_hkm.dll")
+        hkm_dll = windll.LoadLibrary("./wy_hkm.dll")
         hkm_dll.DllInstall.argtypes = (c_long, c_longlong)
         if hkm_dll.DllInstall(1, 2) < 0:
             LogFactory.logger().print_log("注册失败!")
