@@ -1,3 +1,4 @@
+from controller.PanNiController import PanNiController
 from log import LogFactory
 from controller.FeiController import FeiControllerKey
 from controller.KmBoxController import KmBoxControllerKey
@@ -30,3 +31,5 @@ def get_controller(controller_params, mouse_model):
         return FeiControllerKey(controller_params)
     elif mouse_model == "km_box_net":
         return KmBoxNetControllerKey(controller_params)
+    elif mouse_model == "pan_ni":
+        return PanNiController(controller_params)
