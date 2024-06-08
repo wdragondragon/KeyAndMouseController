@@ -1,3 +1,4 @@
+from controller.GHubController import GHubController
 from controller.PanNiController import PanNiController
 from log import LogFactory
 from controller.FeiController import FeiControllerKey
@@ -27,9 +28,11 @@ def get_controller(controller_params, mouse_model):
         return KmBoxControllerKey(controller_params)
     elif mouse_model == "wu_ya":
         return WuYaControllerKey(controller_params)
-    elif mouse_model == "fei_yi_lai":
+    elif mouse_model == "fei_yi_lai" or mouse_model == 'fei_yi_lai_single':
         return FeiControllerKey(controller_params)
     elif mouse_model == "km_box_net":
         return KmBoxNetControllerKey(controller_params)
     elif mouse_model == "pan_ni":
         return PanNiController(controller_params)
+    elif mouse_model == 'logitech':
+        return GHubController(controller_params)

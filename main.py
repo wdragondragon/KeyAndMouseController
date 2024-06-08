@@ -11,16 +11,20 @@ controller_params = {
         "VID/PID": "66882021"
     },
     "wu_ya": {
-        "VID/PID": "26121701"
-    },
-    "fei_yi_lai": {
-        "VID/PID": "C2160301"
+        "VID/PID": "046DC539"
     },
     "km_box_net": {
         "ip": "192.168.2.188",
         "port": "35368",
         "uuid": "8A6E5C53"
     },
+    "fei_yi_lai": {
+        "VID/PID": "C2160102"
+    },
+    "fei_yi_lai_single": {
+        "VID/PID": "C2160301"
+    },
+    "logitech": {},
     "pan_ni": {
         "VID/PID": "1C1FC18A"
     }
